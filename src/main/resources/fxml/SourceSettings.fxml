@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/11.0.1"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.lecturerecorder.controllers.SourceSettingsController"
+          hgap="10" vgap="10" alignment="CENTER"          stylesheets="@../css/style.css">
+    <VBox spacing="10" styleClass="module-pane">
+        <GridPane hgap="10" vgap="10">
+            <Label text="Ширина:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="widthField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Высота:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="heightField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="FPS:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="fpsField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="OK" onAction="#handleOk"/>
+            <Button text="Отмена" onAction="#handleCancel"/>
+        </HBox>
+    </VBox>
+</GridPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lecturerecorder.controllers.SettingsController">
+    <Label style="-fx-font-size: 16px;" text="Настройки" />
+    <GridPane hgap="10" vgap="10">
+        <Label text="Путь сохранения:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="saveLocationField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Шрифт суфлёра:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ChoiceBox fx:id="fontFamilyChoiceBox" styleClass="choice-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Размер шрифта:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="fontSizeField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Цвет шрифта:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <ColorPicker fx:id="fontColorPicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Аудиоисточник:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <ChoiceBox fx:id="audioSourceChoiceBox" styleClass="choice-box" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#handleSave" text="Сохранить" />
+        <Button onAction="#handleCancel" text="Отмена" />
+    </HBox>
+</VBox>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lecturerecorder.controllers.MainController">
+
+        <!-- Верхняя панель для меню -->
+        <top>
+            <MenuBar>
+                <Menu text="Файл">
+                    <MenuItem onAction="#handleSettings" text="Настройки" />
+                    <MenuItem onAction="#handleExit" text="Выход" />
+                </Menu>
+                <Menu text="Вид">
+                    <!-- Дополнительные пункты меню можно добавить здесь -->
+                </Menu>
+            </MenuBar>
+        </top>
+
+        <!-- Центральная область для отображения видео и индикатор записи -->
+        <center>
+            <StackPane>
+                <ImageView fx:id="mainImageView" fitHeight="400" fitWidth="600" />
+                <!-- Индикатор записи -->
+                <ProgressIndicator fx:id="recordingIndicator" maxHeight="50" maxWidth="50" visible="false" />
+            </StackPane>
+        </center>
+
+        <!-- Нижняя панель с горизонтальными блоками -->
+        <bottom>
+            <GridPane hgap="10" maxWidth="1200" styleClass="module-grid" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="32.5" />
+                    <ColumnConstraints percentWidth="15" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="100" />
+                </rowConstraints>
+
+                <!-- Блок "Источники" -->
+                <TitledPane collapsible="false" prefHeight="285.0"  text="Источники" GridPane.columnIndex="0">
+                    <VBox alignment="TOP_CENTER" spacing="10" styleClass="module-pane">
+                        <Label text="Источники" />
+                        <ListView fx:id="sourceListView" prefHeight="200" prefWidth="200" />
+                        <HBox spacing="10">
+                            <Button fx:id="addSourceButton" onAction="#handleAddSource" text="Добавить" />
+                            <Button fx:id="removeSourceButton" onAction="#handleRemoveSource" text="Удалить" />
+                        </HBox>
+                    </VBox>
+                </TitledPane>
+
+                <!-- Блок "Суфлёр" -->
+                <TitledPane collapsible="false" prefHeight="285" text="Суфлёр" GridPane.columnIndex="1">
+                    <VBox alignment="TOP_CENTER" spacing="10" styleClass="module-pane">
+                        <Label text="Суфлёр" />
+                        <TextArea fx:id="teleprompterTextArea" prefRowCount="5" promptText="Введите текст для суфлёра" />
+                        <VBox alignment="CENTER" spacing="10">
+                            <HBox spacing="10">
+                                <Button onAction="#handleSlowSpeed" text="Медленно" />
+                                <Button onAction="#handleNormalSpeed" text="Нормально" />
+                                <Button onAction="#handleFastSpeed" text="Быстро" />
+                            </HBox>
+                            <Button fx:id="pauseResumeTeleprompterButton" onAction="#handleStartTeleprompter" text="Начать" />
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+
+                <!-- Блок "Презентация" -->
+                <TitledPane collapsible="false" prefHeight="285.0"  text="Презентация" GridPane.columnIndex="2">
+                    <VBox alignment="TOP_CENTER" spacing="10" styleClass="module-pane">
+                        <Label text="Презентация" />
+                        <Button onAction="#handleLoadPresentation" text="Загрузить" />
+                        <HBox spacing="10">
+                            <Button onAction="#handlePreviousSlide" text="Предыдущий слайд" />
+                            <Button onAction="#handleNextSlide" text="Следующий слайд" />
+                        </HBox>
+                    </VBox>
+                </TitledPane>
+
+                <!-- Блок общих кнопок управления -->
+                <TitledPane collapsible="false" prefHeight="285.0"  text="Управление" GridPane.columnIndex="3">
+                    <VBox alignment="TOP_CENTER" spacing="10" styleClass="module-pane">
+                        <Button fx:id="startStopRecordingButton" onAction="#handleStartStopRecording" text="Начать запись" />
+                        <Button onAction="#handleSettings" text="Настройки" />
+                        <Button onAction="#handleExit" text="Выход" />
+                    </VBox>
+                </TitledPane>
+
+            </GridPane>
+        </bottom>
+    </BorderPane>

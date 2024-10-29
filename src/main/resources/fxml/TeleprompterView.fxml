@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="400.0" maxWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lecturerecorder.controllers.TeleprompterWindowController">
+
+    <ImageView fx:id="previewImageView" fitHeight="600" fitWidth="800" preserveRatio="true" />
+    <ScrollPane fx:id="textScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background: transparent;" vbarPolicy="NEVER">
+        <VBox fx:id="textContainer" fillWidth="true" style="-fx-background-color: transparent;">
+            <Text fx:id="teleprompterText" style="-fx-background-color: transparent;" wrappingWidth="780" />
+        </VBox>
+    </ScrollPane>
+</StackPane>

@@ -1,0 +1,121 @@
+/* Общий фон приложения */
+.root {
+    -fx-background-color: #2b2b2b;
+}
+
+/* Стили для TitledPane */
+.titled-pane {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #ffffff;
+}
+.progress-indicator {
+    -fx-progress-color: red;
+}
+
+.menu-bar {
+    -fx-background-color: #3c3f41;
+}
+
+.menu {
+    -fx-text-fill: #ffffff;
+}
+
+.menu-item {
+    -fx-text-fill: #ffffff;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 5 0 5 10;
+    -fx-font-size: 14px;
+    -fx-border-color: #555555;
+    -fx-border-width: 0 0 1 0;
+}
+
+.titled-pane > .content {
+    -fx-background-color: #3c3f41;
+    -fx-padding: 10;
+}
+
+/* Стили для GridPane */
+.module-grid {
+    -fx-padding: 10;
+    -fx-background-color: #2b2b2b;
+}
+
+/* Стили для модуля */
+.module-pane {
+    -fx-background-color: #3c3f41;
+    -fx-padding: 10;
+    -fx-border-color: #555555;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+/* Стили для Label */
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Стили для Button */
+.button {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #ffffff;
+}
+
+/* Стили для TextField и TextArea */
+.text-field, .text-area {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #888888;
+}
+
+/* Стили для ChoiceBox и ComboBox */
+.choice-box, .combo-box {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #ffffff;
+}
+
+/* Стили для ColorPicker */
+.color-picker {
+    -fx-background-color: #3c3f41;
+}
+
+/* Стили для ProgressIndicator */
+.progress-indicator {
+    -fx-progress-color: red;
+}
+
+/* Стили для отключенных кнопок */
+.button:disabled {
+    -fx-opacity: 0.5;
+}
+.list-view {
+     -fx-background-color: #2b2b2b;
+     -fx-control-inner-background: #2b2b2b;
+     -fx-text-fill: #ffffff;
+     -fx-border-color: #555555;
+     -fx-border-width: 1;
+     -fx-border-radius: 5;
+ }
+
+ .list-cell {
+     -fx-background-color: #2b2b2b;
+     -fx-text-fill: #ffffff;
+ }
+
+ .list-cell:selected {
+     -fx-background-color: #3c3f41;
+     -fx-text-fill: #ffffff;
+ }
+
+ .text-field, .text-area, .choice-box, .combo-box {
+     -fx-background-color: #3c3f41;
+     -fx-text-fill: #888888;
+     -fx-prompt-text-fill: #888888;
+ }
+
+ #teleprompterTextArea {
+     -fx-text-fill: #000000; /* Чёрный цвет текста */
+ }
